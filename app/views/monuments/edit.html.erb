@@ -1,0 +1,12 @@
+<% content_for :title, "Editing monument" %>
+
+<h1>Editing monument</h1>
+
+<%= render "form", monument: @monument %>
+
+<br>
+
+<div>
+  <%= link_to "Show this monument", @monument %> |
+  <%= link_to "Back to monuments", monuments_path %>
+</div>

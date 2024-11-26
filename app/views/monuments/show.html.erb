@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @monument %>
+
+<div>
+  <%= link_to "Edit this monument", edit_monument_path(@monument) %> |
+  <%= link_to "Back to monuments", monuments_path %>
+
+  <%= button_to "Destroy this monument", @monument, method: :delete %>
+</div>

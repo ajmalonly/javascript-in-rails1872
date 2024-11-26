@@ -1,0 +1,31 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Monuments" %>
+
+<h1>Monuments</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col" data-controller="insert">
+      <div id="monuments" data-insert-target="items">
+        <% @monuments.each do |monument| %>
+          <%= render monument %>
+          <p>
+            <%= link_to "Show this monument", monument %>
+          </p>
+        <% end %>
+      </div>
+  <div data-controller="toggle" class="mt-5">
+    <button class="btn btn-outline-primary" data-action="click->toggle#pop">Add a new monument</button>
+    <div data-toggle-target="form class="d-none">
+      <%= render "form", monument: @monument %>
+    </div>
+  </div>
+<%= link_to "New monument", new_monument_path %>
+    
+    </div>
+  </div>
+</div>
+
+
+
